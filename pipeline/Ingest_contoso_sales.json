@@ -27,6 +27,25 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Extract and load all contoso tables",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "List all tables",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('List all tables').output.value",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
