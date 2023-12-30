@@ -1,0 +1,22 @@
+{
+	"name": "LocalSQLServer",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=localhost;Initial Catalog=ContosoRetailDW;User ID=contoso",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault2",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "password"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SharedIRSProject1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
