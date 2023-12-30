@@ -111,12 +111,14 @@
 											"partitionOption": "None"
 										},
 										"sink": {
-											"type": "ParquetSink",
+											"type": "DelimitedTextSink",
 											"storeSettings": {
 												"type": "AzureBlobFSWriteSettings"
 											},
 											"formatSettings": {
-												"type": "ParquetWriteSettings"
+												"type": "DelimitedTextWriteSettings",
+												"quoteAllText": true,
+												"fileExtension": ".txt"
 											}
 										},
 										"enableStaging": false,
@@ -138,7 +140,7 @@
 									],
 									"outputs": [
 										{
-											"referenceName": "Load_to_datalake",
+											"referenceName": "LoadtoTexttables",
 											"type": "DatasetReference",
 											"parameters": {
 												"Schemaname": {
@@ -146,7 +148,7 @@
 													"type": "Expression"
 												},
 												"Tablename": {
-													"value": "@item().tablename",
+													"value": "@item().Tablename",
 													"type": "Expression"
 												}
 											}
@@ -164,7 +166,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/OnPremSQLServer')]",
-				"[concat(variables('factoryId'), '/datasets/Load_to_datalake')]"
+				"[concat(variables('factoryId'), '/datasets/LoadtoTexttables')]"
 			]
 		},
 		{
