@@ -5,8 +5,14 @@
 		"factoryName": {
 			"value": "myadfprojectpractice1"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"LocalSQLServer_connectionString": {
 			"value": "Integrated Security=False;Data Source=localhost;Initial Catalog=ContosoRetailDW;User ID=contoso"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adfproject1storage.dfs.core.windows.net/"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://ADFProjectKeyValue.vault.azure.net/"
