@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "myadfprojectpractice1"
+		},
+		"LocalSQLServer_connectionString": {
+			"value": "Integrated Security=False;Data Source=localhost;Initial Catalog=ContosoRetailDW;User ID=contoso"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://ADFProjectKeyValue.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://ADFProjectKeyValue.vault.azure.net/"
+		},
+		"SharedIRSProject1_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/7c2b9f6f-40a7-4687-8982-9e0c10a926a9/resourcegroups/ADF/providers/Microsoft.DataFactory/factories/databricksadf-course/integrationruntimes/contosoIRS"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
