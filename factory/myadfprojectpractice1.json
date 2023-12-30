@@ -1,0 +1,9 @@
+{
+	"name": "myadfprojectpractice1",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fa4f22cb-9d16-4060-8e65-2861cb6859e4",
+		"tenantId": "85524025-0bed-45d8-a1e8-34ae439b2492"
+	}
+}
