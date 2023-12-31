@@ -1,0 +1,23 @@
+{
+	"name": "AzureDatabricks1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-7916993028503571.11.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault2",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricksaccessToken"
+			},
+			"existingClusterId": "1230-151430-qmn70xif"
+		},
+		"connectVia": {
+			"referenceName": "SharedIRSProject1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
