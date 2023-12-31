@@ -14,6 +14,9 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://adfproject1storage.dfs.core.windows.net/"
 		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1230-151430-qmn70xif"
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://ADFProjectKeyValue.vault.azure.net/"
 		},
@@ -22,9 +25,6 @@
 		},
 		"SharedIRSProject1_properties_typeProperties_linkedInfo_resourceId": {
 			"value": "/subscriptions/7c2b9f6f-40a7-4687-8982-9e0c10a926a9/resourcegroups/ADF/providers/Microsoft.DataFactory/factories/databricksadf-course/integrationruntimes/contosoIRS"
-		},
-		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
-			"value": "1230-151430-qmn70xif"
 		},
 		"containerUri": {
 			"value": ""
