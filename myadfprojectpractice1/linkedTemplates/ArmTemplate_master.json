@@ -16,6 +16,11 @@
 			"metadata": "Secure string for 'connectionString' of 'LocalSQLServer'",
 			"defaultValue": "Integrated Security=False;Data Source=localhost;Initial Catalog=ContosoRetailDW;User ID=contoso"
 		},
+		"Lnk_sqlserver_local_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Lnk_sqlserver_local'",
+			"defaultValue": "Integrated Security=False;Data Source=localhost;Initial Catalog=ContosoRetailDW;User ID=contoso"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adfproject1storage.dfs.core.windows.net/"
@@ -35,6 +40,10 @@
 		"SharedIRSProject1_properties_typeProperties_linkedInfo_resourceId": {
 			"type": "string",
 			"defaultValue": "/subscriptions/7c2b9f6f-40a7-4687-8982-9e0c10a926a9/resourcegroups/ADF/providers/Microsoft.DataFactory/factories/databricksadf-course/integrationruntimes/contosoIRS"
+		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://ADFProjectKeyValue.vault.azure.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -69,6 +78,9 @@
 					"LocalSQLServer_connectionString": {
 						"value": "[parameters('LocalSQLServer_connectionString')]"
 					},
+					"Lnk_sqlserver_local_connectionString": {
+						"value": "[parameters('Lnk_sqlserver_local_connectionString')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
@@ -80,6 +92,9 @@
 					},
 					"SharedIRSProject1_properties_typeProperties_linkedInfo_resourceId": {
 						"value": "[parameters('SharedIRSProject1_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"AzureKeyVault3_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault3_properties_typeProperties_baseUrl')]"
 					},
 					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
