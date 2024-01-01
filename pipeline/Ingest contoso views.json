@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "SELECT  S.name SchemaName, O.name Tablename\n     \nFROM Sys.Objects O INNER JOIN Sys.Schemas S\n     ON O.schema_id = S.schema_id\nWHERE       O.type = 'V' and s.name not in ('dbo')",
+						"sqlReaderQuery": "SELECT  S.name SchemaName, O.name Tablename\n     \nFROM Sys.Objects O INNER JOIN Sys.Schemas S\n     ON O.schema_id = S.schema_id\nWHERE       O.type = 'V' and s.name ='DaxBook' ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
