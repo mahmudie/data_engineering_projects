@@ -1,0 +1,35 @@
+{
+	"name": "CreateParquetFiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Schemaname": {
+				"type": "string"
+			},
+			"Tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{concat(dataset().Tablename,'.parquet')}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{concat(dataset().Schemaname,'/',dataset().Tablename)}",
+					"type": "Expression"
+				},
+				"fileSystem": "ingested"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

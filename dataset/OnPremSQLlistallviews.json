@@ -1,0 +1,12 @@
+{
+	"name": "OnPremSQLlistallviews",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Lnk_sqlserver_local",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
