@@ -1,0 +1,19 @@
+{
+	"name": "t1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-3674790290080703.3.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricksaccesstokenid"
+			},
+			"existingClusterId": "0102-174319-8qew5d5r"
+		}
+	}
+}
